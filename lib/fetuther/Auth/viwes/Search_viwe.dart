@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/Core/utlis/App_navigate.dart';
-import 'package:news_app/fetuther/Auth/viwes/Home_viwe.dart';
+import 'package:news_app/fetuther/Auth/viwes/Home_buttom_navi.dart';
 import 'package:news_app/fetuther/Auth/viwes/widght/cusatom_bottom.dart';
 import 'package:news_app/fetuther/Auth/viwes/widght/custom_textfiled.dart';
 
