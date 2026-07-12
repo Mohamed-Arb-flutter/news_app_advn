@@ -6,6 +6,6 @@ class CustomTextfiled extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  TextFormField(decoration: InputDecoration(hintText: hint,border: OutlineInputBorder(borderRadius: BorderRadius.circular(8))),);
+    return  TextFormField(decoration: InputDecoration(hintText: hint,prefixIcon: Icon(Icons.person),border: OutlineInputBorder(borderRadius: BorderRadius.circular(8))),);
   }
 }

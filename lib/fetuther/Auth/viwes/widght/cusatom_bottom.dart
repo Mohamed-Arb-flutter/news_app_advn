@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/Core/utlis/App_color.dart';
 
 class CusatomBottom extends StatelessWidget {
   final String text;
@@ -7,6 +8,6 @@ class CusatomBottom extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(onPressed:onPressed, child:Text(text));
+    return ElevatedButton(onPressed:onPressed, child:Text(text),style:ElevatedButton.styleFrom(backgroundColor: AppColor.primercolor,foregroundColor: Colors.white),);
   }
 }
