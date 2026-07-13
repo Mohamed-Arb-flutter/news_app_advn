@@ -15,5 +15,9 @@ abstract class AppAssets
   static String test ='assets/images/test.jpg';
   static String test1 ='assets/images/Image.png';
   static String small ='assets/images/i11.png';
+  static String hail ='assets/images/mdi_weather-hail.png';
+  static String windy ='assets/images/mdi_weather-windy.png';
+  static String sunny ='assets/images/typcn_weather-sunny.png';
+  static String temp ='assets/images/uil_temperature-three-quarter.png';
 
 }

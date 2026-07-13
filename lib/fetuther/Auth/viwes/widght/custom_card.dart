@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/Core/utlis/App_assets.dart';
+import 'package:news_app/Core/utlis/App_text_style.dart';
 
 class CustomCard extends StatelessWidget {
   const CustomCard({super.key});
@@ -25,12 +26,12 @@ class CustomCard extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Text('mohamed', style: TextStyle(color: Colors.white)),
+                      Text('mohamed', style: AppTextStyle.textimge),
                       Spacer(flex: 1),
-                      Text('data', style: TextStyle(color: Colors.white)),
+                      Text('data', style: AppTextStyle.textimge),
                     ],
                   ),
-                  Text('data', style: TextStyle(color: Colors.white)),
+                  Text('data', style:AppTextStyle.textimge),
                 ],
               ),
             ),

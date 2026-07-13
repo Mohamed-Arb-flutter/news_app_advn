@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/Core/utlis/App_color.dart';
+import 'package:news_app/Core/utlis/App_text_style.dart';
 import 'package:news_app/fetuther/Auth/viwes/widght/custom_card.dart';
 import 'package:news_app/fetuther/Auth/viwes/widght/custom_list_viwe.dart';
 
@@ -20,23 +21,23 @@ class HomeButtom extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text('Good Morning,', style: TextStyle(fontSize: 15)),
+                   Text('Good Morning,', style:AppTextStyle.AppHome),
                   const SizedBox(height: 4), 
                   Row(
                     children: [
-                      const Text('mohamed ibrahim', style: TextStyle(fontSize: 15)),
+                       Text('mohamed ibrahim', style:AppTextStyle.AppHome),
                       const Spacer(),
                       Row(
                         children: [
                           const Icon(Icons.sunny),
                           const SizedBox(width: 8), 
-                          const Text('Sunny 32oC', style: TextStyle(fontSize: 15)),
+                           Text('Sunny 32oC', style:AppTextStyle.AppHome),
                         ],
                       ),
                     ],
                   ),
                   const SizedBox(height: 4),
-                  const Text('Sun 9 April, 2023'),
+                   Text('Sun 9 April, 2023',style:AppTextStyle.hedwel,),
                 ],
               ),
             ),
@@ -53,17 +54,17 @@ class HomeButtom extends StatelessWidget {
                           
                     // --- Section Title ---
                     const SizedBox(height: 24), 
-                    const Row(
+                     Row(
                       children: [
-                        Text('Most Popular'),
+                        Text('Most Popular',style: AppTextStyle.pup,),
                         Spacer(),
-                        Text('See More'),
+                        Text('See More',style: AppTextStyle.see,),
                       ],
                     ),
                     
                     // --- List Section ---
                     const SizedBox(height: 16), 
-                    // الـ Expanded هنا سيعمل بشكل صحيح لأنه داخل Column محكوم بمساحة الأب
+                  
                     const Expanded(
                       child: CustomListViwe(),
                     ),

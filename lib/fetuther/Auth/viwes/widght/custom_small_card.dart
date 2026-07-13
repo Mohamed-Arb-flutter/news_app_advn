@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/Core/utlis/App_assets.dart';
+import 'package:news_app/Core/utlis/App_text_style.dart';
 
 class CustomSmallCard extends StatelessWidget {
   const CustomSmallCard({super.key});
@@ -8,7 +9,7 @@ class CustomSmallCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
     width: 150,
-    // إضافة mainAxisSize.min بتمنع الكولوم إنه يحاول ياخد كل الارتفاع المتاح
+   
     child: Column(
       mainAxisSize: MainAxisSize.min, 
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -17,7 +18,7 @@ class CustomSmallCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
           child: Image.asset(
             AppAssets.small,
-            height: 90, // قللنا الارتفاع 10 بيكسل إضافية عشان ندي مساحة للنصوص
+            height: 90, 
             width: double.infinity,
             fit: BoxFit.cover,
           ),
@@ -27,10 +28,10 @@ class CustomSmallCard extends StatelessWidget {
           'The Pros and Cons of Remote Work',
           maxLines: 2,
           overflow: TextOverflow.ellipsis,
-          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13), // تصغير الخط شوية
+          style:AppTextStyle.card, 
         ),
         const SizedBox(height: 4),
-        const Text('Technology', style: TextStyle(color: Colors.grey, fontSize: 12)),
+         Text('Technology', style: AppTextStyle.card2),
       ],
     ),
   );

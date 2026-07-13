@@ -2,12 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:news_app/Core/utlis/App_assets.dart';
 
 import 'package:news_app/Core/utlis/App_color.dart';
-import 'package:news_app/fetuther/Auth/viwes/widght/butomnavi.dart';
 
-import 'package:news_app/fetuther/Auth/viwes/widght/custom_card.dart';
-import 'package:news_app/fetuther/Auth/viwes/widght/custom_list_viwe.dart';
+
 import 'package:news_app/fetuther/page/viwes/exploer.dart';
-import 'package:news_app/fetuther/page/viwes/fave.dart';
+import 'package:news_app/fetuther/page/viwes/Bookmark.dart';
 import 'package:news_app/fetuther/page/viwes/home_viwe.dart';
 import 'package:news_app/fetuther/page/viwes/weather.dart';
 
@@ -45,11 +43,11 @@ class _HomeViweState extends State<HomeViwe> {
     ),
     BottomNavigationBarItem(
       icon: Image.asset(AppAssets.love, width: 24, height: 24, color: index == 1 ? Colors.blue : Colors.black),
-      label: 'Fav',
+      label: 'Bookmark',
     ),
     BottomNavigationBarItem(
       icon: Image.asset(AppAssets.earth, width: 24, height: 24, color: index == 2 ? Colors.blue : Colors.black),
-      label: 'Earth',
+      label: 'Exploer',
     ),
     BottomNavigationBarItem(
       icon: Image.asset(AppAssets.weather, width: 24, height: 24, color: index == 3 ? Colors.blue : Colors.black),

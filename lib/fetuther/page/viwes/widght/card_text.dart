@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/Core/utlis/App_assets.dart';
+import 'package:news_app/Core/utlis/App_text_style.dart';
 
 class CardText extends StatelessWidget {
   const CardText({super.key});
@@ -16,7 +17,7 @@ class CardText extends StatelessWidget {
           child: Image.asset(AppAssets.test,height: 220,),
         ),
           //SizedBox(height: 4),
-          Text("Uncovering the Hidden Gems of the Amazon Forest"),
+          Text("Uncovering the Hidden Gems of the Amazon Forest",style: AppTextStyle.hedim,),
           SizedBox(height: 4),
           Row(
             children: [
