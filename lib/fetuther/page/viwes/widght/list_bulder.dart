@@ -1,54 +1,52 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/Core/utlis/App_assets.dart';
-import 'package:news_app/Core/utlis/App_navigate.dart';
-import 'package:news_app/Core/utlis/App_text_style.dart';
+import 'package:news_app/fetuther/page/data/model/top_model.dart';
 import 'package:news_app/fetuther/page/viwes/Article.dart';
+// قم باستيراد صفحة التفاصيل هنا
 
 class listbulderitem extends StatelessWidget {
-  const listbulderitem({super.key});
+  final List<ArticleModel> articles; 
+
+  const listbulderitem({super.key, required this.articles}); 
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(itemCount: 10,itemBuilder: (context,index){return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16,vertical: 8),
-      child: GestureDetector(onTap: () {
-        AppNavigate.toPUSH(context,Article());
-      },child: posts()),
-    );});
-  }
-}
-
-class posts extends StatelessWidget {
-  const posts({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      
-      children: [
-        Column(
-          children: [
-            Text("'Experience the Serenity\n of Japan's Traditional'",style: AppTextStyle.hedl,),
-            SizedBox(height: 4,),
-            Row(
-              children: [
-                CircleAvatar(
-                  backgroundImage: AssetImage('assets/images/i11.png'),
-                  radius: 10,
-                ),
-                SizedBox(width: 4,),
-                Text('2020/5/2    *** 20000',style: TextStyle(color: Colors.grey,fontSize: 14),),
-              ],
+    return ListView.builder(
+      itemCount: articles.length,
+      itemBuilder: (context, index) {
+        final article = articles[index];
+        
+        return Card(
+          margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          child: ListTile(
+            title: Text(
+              article.title ?? 'No Title', 
+              maxLines: 2, 
+              overflow: TextOverflow.ellipsis,
             ),
-          ],
-        ),
-        Spacer(),
-        Container(
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(16)),
-          clipBehavior: Clip.antiAlias,
-          child: Image.asset(AppAssets.test1,height: 90,),
-        ),
-      ],
+            subtitle: Text(article.author ?? 'Unknown Author'),
+            leading: article.urlToImage != null && article.urlToImage!.isNotEmpty
+                ? Image.network(
+                    article.urlToImage!,
+                    width: 70,
+                    height: 70,
+                    fit: BoxFit.cover,
+                    errorBuilder: (context, error, stackTrace) => 
+                        const Icon(Icons.broken_image, size: 40),
+                  )
+                : const Icon(Icons.image, size: 40),
+            
+            // --- تفعيل الانتقال لصفحة التفاصيل عند الضغط ---
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ArticlePage(article: article), // تمرير الخبر هنا
+                ),
+              );
+            },
+          ),
+        );
+      },
     );
   }
 }

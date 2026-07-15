@@ -42,6 +42,6 @@ class SearchViwe extends StatelessWidget {
                       ),
                       Spacer()
                     ],
-                  ),SizedBox(height: 10,),listbulderitem()],)),);
+                  ),SizedBox(height: 10,),listbulderitem(articles: [],)],)),);
   }
 }
